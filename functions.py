@@ -154,9 +154,52 @@
 # # Crea una función que reciba dos números y un operador (+, -, *, /) y devuelva el resultado de la operación.
 # # Debe manejar el caso de división entre cero.
 
+# print("Ejercicio 9")
+
+# primer_numero = int(input("Introduce un número: "))
+# segundo_numero = int(input("Ahora otro número: "))
+# operador = input("Finalmente introduce el operador: ")
+
+# def calculadora(primer_numero, segundo_numero, operador):
+#     result = 0
+#     if operador == '+':
+#         result = primer_numero + segundo_numero
+#     elif operador == '-':
+#         result = primer_numero - segundo_numero
+#     elif operador == '/':
+#         if segundo_numero == 0:
+#             return "El 0 no es divisble, prueba otro número"
+#         else:
+#             result = primer_numero / segundo_numero
+#     elif operador == '*':
+#         result = primer_numero * segundo_numero
+#     else:
+#         return "Operador no válido"
+
+#     return f"{primer_numero} {operador} {segundo_numero} = {result}"
+# print(calculadora(primer_numero, segundo_numero, operador))
+
 # # 10. Año bisiesto
 # # Crea una función que reciba un año y devuelva True si es bisiesto, o False si no lo es.
 # # (Es bisiesto si es divisible por 4, excepto si también es divisible por 100 y no por 400).
+
+# print("Ejercicio 10")
+
+# anio = int(input("Introduce un año: "))
+
+# def anio_bisiesto(anio):
+#     if anio % 4 == 0:
+#         if anio % 100 == 0:
+#             if anio % 400 == 0:
+#                 return "Es bisiesto"
+#             else:
+#                 return "No es bisiesto"
+#         else:
+#             return "Es bisiesto"
+#     else:
+#         return "No es bisiesto"
+
+# print(anio_bisiesto(anio))
 
 # # 11. Clasificar edades
 # # Crea una función que reciba una edad y devuelva una categoría:
@@ -170,3 +213,38 @@
 # # 18-64: "Adulto/a"
 
 # # 65+: "Adulto/a mayor"
+
+print("Ejercicio 11")
+
+edad = int(input("Dime una edad: "))
+
+def edades(edad):
+    if edad >= 65:
+        return "Es adulto/a mayor"
+    elif 18 >= edad <= 64:
+        return "Es adulto"
+    elif 13 >= edad <= 17:
+        return "Es adolescente"
+    elif 3 >= edad <= 12:
+        return "Es niño/a"
+    elif 0 >= edad <= 2:
+        return "Es bebé"
+    else:
+        return "Edad no válida"
+
+print(edades(edad))
+
+# Otra opción de hacer la lógica para no repetir
+# def edades(edad):
+#     if edad >= 65:
+#         return "Es adulto/a mayor"
+#     elif 18 <= edad <= 64:
+#         return "Es adulto"
+#     elif 13 <= edad <= 17:
+#         return "Es adolescente"
+#     elif 3 <= edad <= 12:
+#         return "Es niño/a"
+#     elif 0 <= edad <= 2:
+#         return "Es bebé"
+#     else:
+#         return "Edad no válida"
