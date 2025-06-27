@@ -8,14 +8,15 @@
 nests = [12, 7, 24, 5, 18, 3, 42, 11, 8, 27, 36, 9, 2]
 
 def dinosaur_eggs(nests):
-    carnivorous_eggs = 0
     total_nest = len(nests)
     total_eggs_in_nests = 0
 
     for total_eggs in nests:
         total_eggs_in_nests += total_eggs
 
+    carnivorous_eggs = 0
     total_carnivorous_nest = 0
+    
     for nest in nests:
         if nest % 2 == 0:
             carnivorous_eggs += nest
